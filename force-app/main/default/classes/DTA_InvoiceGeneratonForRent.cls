@@ -6,7 +6,7 @@ public with sharing class DTA_InvoiceGeneratonForRent {
         if(objectName == 'Account' ){
             contracts =[SELECT Status, Opportunity__r.Name, Account.Name, DTA_Fixed_Income__c
             FROM Contract WHERE AccountId = : accountId  WITH SECURITY_ENFORCED];
-
+            //comment 
         }else{
 
             contracts =[SELECT Status, Opportunity__r.Name, Account.Name, DTA_Fixed_Income__c
@@ -39,7 +39,8 @@ public with sharing class DTA_InvoiceGeneratonForRent {
         @AuraEnabled public Decimal fixedIncome {get;set;}
 
         public ContractWrapper(){
-           
+           //test
+           System.debug('test');
         } 
    }
     @AuraEnabled  
