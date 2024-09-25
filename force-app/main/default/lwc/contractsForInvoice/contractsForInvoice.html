@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contratos para Generar Factura">  
+        <lightning-button slot="actions" label="Generar Factura"  onclick={generate}></lightning-button>  
+        <div class="slds-box">  
+          <lightning-datatable  
+          data={contractsList.data} columns={cols} key-field="contractId">  
+          </lightning-datatable>  
+        </div>  
+      </lightning-card>    
+</template>
